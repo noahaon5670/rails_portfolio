@@ -13,17 +13,17 @@ development:
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
   
-production:
-  <<: *default
-  database: myapp_production
-  username: root
-  host: db
-  password: <%= ENV['DATABASE_PASSWORD'] %>
-  socket: /var/lib/mysql/mysql.sock
-
 test:
   <<: *default
   database: myapp_test
   host: db
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
+  
+production:
+  <<: *default
+  database: myapp_production
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
+
