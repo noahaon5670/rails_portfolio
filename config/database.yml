@@ -12,6 +12,13 @@ development:
   host: db
   username: root
   password: password
+  
+production:
+  <<: *default
+  database: アプリ名_production
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
 
 test:
   <<: *default
