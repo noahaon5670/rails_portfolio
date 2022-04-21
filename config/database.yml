@@ -9,14 +9,14 @@ default: &default
 development:
   <<: *default
   database: myapp_development
-  host: db
+  # host: db
   username: root
   password: password
   
 test:
   <<: *default
   database: myapp_test
-  host: db
+  # host: db
   username: root
   password: password
   
