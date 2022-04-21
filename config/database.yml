@@ -23,7 +23,7 @@ test:
 production:
   <<: *default
   database: myapp_production
-  # host: db
+  host: db
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
