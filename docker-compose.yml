@@ -19,3 +19,7 @@ services:
       - "3000:3000"
     depends_on:
       - db
+    environment:
+      MYSQL_USERNAME: root
+      MYSQL_PASSWORD: password
+      MYSQL_HOST: db
