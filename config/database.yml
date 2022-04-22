@@ -22,7 +22,6 @@ test:
   
 production:
   <<: *default
-  host: localhost
   database: myapp_production
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
