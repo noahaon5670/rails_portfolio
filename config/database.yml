@@ -24,7 +24,7 @@ production:
   <<: *default
   database: myapp_production
   username: root
-  password: hoge
-  # password: <%= ENV['DATABASE_PASSWORD'] %>
+  # password: hoge
+  password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
 
