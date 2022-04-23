@@ -19,7 +19,8 @@ test:
   host: db
   username: root
   password: password
-  
+
+# 開発環境で記述して不具合がある場合は削除
 production:
   <<: *default
   database: myapp_production
