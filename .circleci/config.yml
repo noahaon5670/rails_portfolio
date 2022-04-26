@@ -19,12 +19,11 @@ jobs:
         steps:
             - checkout
             # CircleCI に登録した秘密鍵を呼び出す
-            # - add_ssh_keys:
-            #     fingerprints:
-            #       - "${KEY_FINGERPRINT}"
+            - add_ssh_keys:
+                fingerprints:
+                  - "${KEY_FINGERPRINT}"
             # CircleCI に登録した環境変数を使って SSH
-            - run: ssh -v git@github.com
-            # - run: ssh ${USER_NAME}@${HOST_NAME} 'cd /var/www/rails_portfolio/ && git pull origin main'
+            - run: ssh -o StrictHostKeyChecking=no ${USER_NAME}@${HOST_NAME} 'cd /var/www/rails_portfolio/ && git pull origin main'
  
 workflows:
     version: 2
