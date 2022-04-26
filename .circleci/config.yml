@@ -23,7 +23,7 @@ jobs:
                 fingerprints:
                   - "${KEY_FINGERPRINT}"
             # CircleCI に登録した環境変数を使って SSH
-            $ ssh -v git@github.com
+            - run: ssh -v git@github.com
             # - run: ssh ${USER_NAME}@${HOST_NAME} 'cd /var/www/rails_portfolio/ && git pull origin main'
  
 workflows:
